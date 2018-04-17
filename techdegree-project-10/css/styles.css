@@ -1,0 +1,189 @@
+*{
+	font-family: 'Montserrat', sans serif;
+}
+
+body{
+	width:90%;
+/*	border:1px solid black;*/
+	margin:0 auto;
+	background-color: whitesmoke;
+}
+
+header{
+	text-align: center;
+}
+
+#employees ul{
+	list-style: none;
+	padding:0;
+	/*border:1px solid red;*/
+}
+
+#employees li{
+	display:inline-block;
+	border:2px solid lightgrey;
+	border-radius: 10px;
+	width:100%;
+	margin:20px 0;
+	background-color: white;
+	box-sizing: border-box;
+}
+
+#employees label{
+	width:100%;
+	height:100%;
+	padding:20px 0;
+	display:flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#employees li:hover{
+	background-color: azure ;
+	transition: 0.2s ease-out;
+}
+
+#employees label:hover{
+	cursor:pointer;
+}
+
+
+#employees img{
+	border-radius: 50%;
+}
+
+.img-container,
+.text-container{
+	text-align: center;
+	margin:5px 0;
+}
+
+.text-container p,
+.text-container h3{
+	margin:5px;
+}
+
+
+#modal-windows ul{
+	list-style: none;
+	padding:0;
+}
+
+.round{
+	border-radius: 50%;
+	padding-top: 5px;
+}
+
+.close{
+	text-align: right;
+	padding:2px;
+	margin-left:90%;
+}
+
+.close:hover{
+	cursor:pointer;
+}
+/*WORKING HERE*/
+#modal-windows li{
+	list-style: none;
+	padding:0;
+	text-align: center;
+	position:fixed;
+	border-radius: 5px;
+	width:80%;
+	max-width: 350px;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	background-color: white;
+	z-index:5000%;
+}
+
+.basic-info{
+	border-bottom: 1px solid black;
+	width:90%;
+	margin:auto;
+}
+
+.more-info{
+	width:90%;
+	margin:auto;
+}
+
+#dim-screen{
+	width:100%;
+	height:100%;
+	background-color: rgba(0,0,0,0.5);
+	position:fixed;
+	top:0;
+	left:0;
+	display:none;
+}
+
+.employee-modal{
+	z-index:5000;
+}
+
+input{
+	display:none;
+}
+
+
+/*MEDIA QUERIES*/
+@media screen and (min-width: 500px){
+	#employees label{
+		flex-direction: row;
+	}
+
+	.text-container{
+		text-align: left;
+	}
+}
+
+@media screen and (min-width: 768px){
+
+	#employees ul{
+		display:flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	#employees li{
+		width:45%;
+		flex-direction: column;
+		display:inline-flex;
+	}
+
+	#employees label{
+		width:100%;
+		flex-direction: column;
+		display:inline-flex;
+	}
+
+	.text-container{
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 1024px){
+	header{
+		
+		text-align: left;
+		margin:0 auto;
+	}
+
+	#employees ul{
+		justify-content: space-around;
+	}
+
+	#employees li{
+		width:30%;
+	}
+}
+
+@media screen and (min-width: 1500px){
+	#employees label{
+		flex-direction: row;
+	}
+}
